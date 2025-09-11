@@ -1,0 +1,98 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Core Colors */
+    --color-background: #FEFEFE; /* near-white */
+    --color-foreground: #1F2937; /* rich-charcoal */
+    --color-border: rgba(0, 0, 0, 0.1); /* subtle-border */
+    --color-input: #F8FAFC; /* subtle-gray */
+    --color-ring: #1E3A8A; /* deep-academic-blue */
+    
+    /* Card Colors */
+    --color-card: #FEFEFE; /* near-white */
+    --color-card-foreground: #1F2937; /* rich-charcoal */
+    --color-popover: #FEFEFE; /* near-white */
+    --color-popover-foreground: #1F2937; /* rich-charcoal */
+    
+    /* Muted Colors */
+    --color-muted: #F8FAFC; /* subtle-gray */
+    --color-muted-foreground: #6B7280; /* medium-gray */
+    
+    /* Primary Colors */
+    --color-primary: #1E3A8A; /* deep-academic-blue */
+    --color-primary-foreground: #FFFFFF; /* white */
+    
+    /* Secondary Colors */
+    --color-secondary: #D97706; /* warm-amber */
+    --color-secondary-foreground: #FFFFFF; /* white */
+    
+    /* Accent Colors */
+    --color-accent: #7C3AED; /* sophisticated-purple */
+    --color-accent-foreground: #FFFFFF; /* white */
+    
+    /* Status Colors */
+    --color-success: #059669; /* forest-green */
+    --color-success-foreground: #FFFFFF; /* white */
+    
+    --color-warning: #D97706; /* warm-amber */
+    --color-warning-foreground: #FFFFFF; /* white */
+    
+    --color-error: #DC2626; /* clear-red */
+    --color-error-foreground: #FFFFFF; /* white */
+    
+    --color-destructive: #DC2626; /* clear-red */
+    --color-destructive-foreground: #FFFFFF; /* white */
+  }
+  
+  * {
+    @apply border-border;
+  }
+  
+  body {
+    @apply bg-background text-foreground;
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
+}
+
+@layer utilities {
+  .animate-pulse-gentle {
+    animation: pulse-gentle 2s ease-in-out infinite;
+  }
+  
+  @keyframes pulse-gentle {
+    0%, 100% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 0.7;
+    }
+  }
+  
+  .transition-micro {
+    transition: transform 200ms ease, opacity 200ms ease;
+  }
+  
+  .hover-lift:hover {
+    transform: scale(1.02);
+  }
+  
+  .shadow-ceremonial {
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  }
+  
+  .shadow-ceremonial-lg {
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .shadow-ceremonial-xl {
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+  }
+}
